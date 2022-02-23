@@ -9,10 +9,11 @@ $fontMain: Arial, sans-serif;
 $base-x: 4px;
 
 // font-size
-$font-size-4: $base-x;
-$font-size-8: 2 * $base-x;
-$font-size-12: 3 * $base-x;
-$font-size-16: 4 * $base-x;
+$font-size-14: 3 * $base-x + 2;
+$font-size-18: 4 * $base-x + 2;
+$font-size-20: 5 * $base-x;
+$font-size-56: 14 * $base-x;
+$font-size-136: 34 * $base-x;
 
 // size
 $size-4: $base-x;
@@ -35,6 +36,7 @@ $size-68: 17 * $base-x;
 $size-72: 18 * $base-x;
 $size-76: 19 * $base-x;
 $size-80: 20 * $base-x;
+$size-136: 34 * $base-x;
 
 // media
 $desktop-xlg-width: 1920px;
