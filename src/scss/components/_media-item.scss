@@ -1,0 +1,38 @@
+@use "scss/global" as *;
+
+.media-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(25% - 12px);
+}
+
+.media-item__title {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.media-item__desc {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .media-item__title {
+    margin-top: 20px;
+  }
+
+  .media-item__desc {
+    margin-top: 12px;
+  }
+}
+
+@media screen and (max-width: $tablet-md-width) {
+  .media-item {
+    width: calc(50% - 12px);
+
+    &:not(:nth-child(n + 2)) {
+      margin-bottom: 40px;
+    }
+  }
+}

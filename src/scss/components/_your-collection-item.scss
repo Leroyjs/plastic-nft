@@ -1,0 +1,52 @@
+@use "scss/global" as *;
+
+.your-collection-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(calc(calc(100vw - 80px) / 4) - 12px);
+}
+
+.your-collection-item__title {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.your-collection-item__desc {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: $desktop-md-width) {
+  .your-collection-item {
+    width: calc(calc(calc(100vw - 62px) / 4) - 12px);
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .your-collection-item {
+    width: calc(calc(calc(100vw - 48px) / 4) - 12px);
+  }
+}
+
+@media screen and (max-width: $tablet-md-width) {
+  .your-collection-item {
+    width: calc(calc(calc(100vw - 40px) / 2) - 6px);
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .your-collection-item {
+    width: calc(calc(calc(100vw - 24px) / 2) - 6px);
+  }
+
+  .your-collection-item__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  .your-collection-item__desc {
+    margin-top: 12px;
+    max-width: 128px;
+  }
+}

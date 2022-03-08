@@ -1,19 +1,24 @@
 // colors
 $white: #fff;
-$black: #000;
+$black: #181818;
+$transparent: rgba(0, 0, 0, 0);
+$bg: #f5f8fa;
+$yellow: #f6d14c;
+$blue: #37b0f2;
+$orange: #f6934c;
 
 // fonts
-$fontMain: Arial, sans-serif;
+$fontMain: "NeueMachina", Arial, sans-serif;
 
 //base
 $base-x: 4px;
 
 // font-size
-$font-size-14: 3 * $base-x + 2;
+$font-size-16: 4 * $base-x;
 $font-size-18: 4 * $base-x + 2;
 $font-size-20: 5 * $base-x;
-$font-size-56: 14 * $base-x;
-$font-size-136: 34 * $base-x;
+$font-size-48: 12 * $base-x;
+$font-size-164: 41 * $base-x;
 
 // size
 $size-4: $base-x;
@@ -44,6 +49,7 @@ $desktop-lg-width: 1600px;
 $desktop-md-width: 1440px;
 $desktop-sm-width: 1280px;
 $tablet-lg-width: 1024px;
+$tablet-md-width: 900px;
 $tablet-sm-width: 768px;
 $phone-width: 600px;
 

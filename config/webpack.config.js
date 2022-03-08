@@ -64,7 +64,6 @@ module.exports = {
             path.join(__dirname, "../src/html/sections"),
             path.join(__dirname, "../src/html/components"),
           ],
-          helperDirs: [path.join(__dirname, "../src/helpers")],
         },
       },
       {
@@ -159,8 +158,10 @@ module.exports = {
     extensions: [".js", ".jsx", ".vue", ".sass", ".scss", ".css"],
     alias: {
       "~": srcPath,
-      "@": `${srcPath}/js`,
+      js: `${srcPath}/js`,
       scss: `${srcPath}/scss`,
+      components: `${srcPath}/scss/components`,
+      sections: `${srcPath}/scss/sections`,
     },
   },
   target: "web",

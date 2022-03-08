@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@use "scss/foundation";
+
+/* List of sections used on this page: */
+@use "scss/main-page";
+@use "sections/header";
+@use "sections/about-first-section";
+@use "sections/in-circulation";
+@use "sections/gallery";
+@use "sections/footer";

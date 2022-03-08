@@ -1,0 +1,13 @@
+@use "scss/global" as *;
+
+.media__main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: $tablet-md-width) {
+  .media__title {
+    text-align: center;
+  }
+}

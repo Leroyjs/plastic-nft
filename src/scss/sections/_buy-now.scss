@@ -1,0 +1,143 @@
+@use "scss/global" as *;
+
+.buy-now__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buy-now__desc {
+  text-align: right;
+}
+
+.buy-now__main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.buy-now__item-wrapper {
+  margin-right: 16px;
+  margin-bottom: 60px;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.buy-now__blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.buy-now__blur-item {
+  background-color: $yellow;
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: -140px;
+  right: -140px;
+  opacity: 0.6;
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: buy-now-blur-item 30s infinite alternate;
+  transform-origin: right top;
+}
+
+@keyframes buy-now-blur-item {
+  from {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.buy-now__title {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.buy-now__main {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.buy-now__desc {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.loaded-whitout-animation {
+  .buy-now__title {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 0.4s 0.4s, transform 0.4s 0.4s;
+  }
+  .buy-now__desc {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 0.4s 0.6s, transform 0.4s 0.6s;
+  }
+  .buy-now__main {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 0.4s 0.8s, transform 0.4s 0.8s;
+  }
+}
+
+@media screen and (max-width: $desktop-md-width) {
+  .buy-now__item-wrapper {
+    margin-right: 12px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-md-width) {
+  .buy-now__item-wrapper {
+    margin-right: 12px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  .buy-now__main {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .buy-now__title-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buy-now__item-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .buy-now__desc {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 336px;
+
+    br {
+      display: none;
+    }
+  }
+  .buy-now__main {
+    margin-top: 40px;
+  }
+}

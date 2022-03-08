@@ -1,3 +1,42 @@
-<header class="header">
-
+<header class="header main-padding">
+  <div class="header__logo-wrapper">
+    <a href="/" class="header__logo">
+      {{> main-logo}}
+    </a>
+    <a href="" data-lang="en" class="header__lang header__lang_desk text_size_link text_color_black link text-fix text_uppercase">EN</a>
+    <a href="" data-lang="de" class="header__lang header__lang_desk text_size_link text_color_black link text-fix text_uppercase">de</a>
+  </div>
+  <nav class="header__nav">
+    <ul class="header__ul text_weight_medium">
+      <li class="header__li{{#if main-page }} header__li_active{{/if}}"><a href="/" class="header__link text_size_link text_color_black link" data-i18n="link.main">Main</a></li>
+      <li class="header__li{{#if collection-page }} header__li_active{{/if}}"><a href="/collection.html" class="header__link text_size_link text_color_black link" data-i18n="link.collection">Collection</a></li>
+      <li class="header__li{{#if about-page }} header__li_active{{/if}}"><a href="/about.html" class="header__link text_size_link text_color_black link" data-i18n="link.about">About</a></li>
+      <li class="header__li{{#if profile-page }} header__li_active{{/if}}"><a href="/sign-in.html" class="header__link text_size_link text_color_black link" data-i18n="link.profile">Profile</a></li>
+      <li class="header__li">
+        <a href="/buy-now.html" class="header_button button button_color_black button_type_common text_size_link text-fix" data-i18n="link.buy">Buy Now</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="header__burger-btn">
+    <div class="header__burger-btn-line"></div>
+  </div>
 </header>
+<div class="burger-menu main-padding">
+  <nav class="burger-menu__nav">
+    <ul class="burger-menu__ul text_weight_medium">
+      <li class="burger-menu__li{{#if main-page }} burger-menu__li_active{{/if}}"><a href="/" class="header__link text_size_link text_color_black text_uppercase" data-i18n="link.main">Main</a></li>
+      <li class="burger-menu__li{{#if collection-page }} burger-menu__li_active{{/if}}"><a href="/collection.html" class="header__link text_size_link text_color_black text_uppercase" data-i18n="link.collection">Collection</a></li>
+      <li class="burger-menu__li{{#if about-page }} burger-menu__li_active{{/if}}"><a href="/about.html" class="header__link text_size_link text_color_black text_uppercase" data-i18n="link.about">About</a></li>
+      <li class="burger-menu__li{{#if profile-page }} burger-menu__li_active{{/if}}"><a href="/sign-in.html" class="header__link text_size_link text_color_black text_uppercase" data-i18n="link.profile">Profile</a></li>
+      <li class="burger-menu__li{{#if buy-now }} burger-menu__li_active{{/if}}"><a href="/buy-now.html" class="header__link text_size_link text_color_black text_uppercase" data-i18n="link.buy">Buy Now</a></li>
+    </ul>
+    <div class="burger-menu__lang-wrapper">
+      <div class="burger-menu__lang-burger-btn" data-lang="en">
+        EN
+      </div>
+      <div class="burger-menu__lang-burger-btn" data-lang="de">
+        DE
+      </div>
+    </div>
+  </nav>
+</div>

@@ -1,7 +1,9 @@
 @use "scss/global" as *;
 
 /* Example include fonts from local file */
-// @include font-face("TTHoves", "../../fonts/some-path", normal);
+@include font-face("NeueMachina", "../../fonts/NeueMachina-Bold", bold);
+@include font-face("NeueMachina", "../../fonts/NeueMachina-Medium", medium);
+@include font-face("NeueMachina", "../../fonts/NeueMachina-Regular", normal);
 
 $text-colors: (
   "white": $white,
@@ -14,17 +16,17 @@ $text-colors: (
 
   &_size {
     &_h1 {
-      font-size: $font-size-136;
+      font-size: $font-size-164;
       line-height: 100%;
     }
 
     &_h2 {
-      font-size: $font-size-56;
+      font-size: $font-size-48;
       line-height: 100%;
     }
 
     &_link {
-      font-size: $font-size-20;
+      font-size: $font-size-16;
       line-height: 100%;
     }
 
@@ -34,7 +36,7 @@ $text-colors: (
     }
 
     &_desc {
-      font-size: $font-size-14;
+      font-size: $font-size-20;
       line-height: 132%;
     }
   }
@@ -69,6 +71,101 @@ $text-colors: (
     @each $color, $val in $text-colors {
       &_#{$color} {
         color: $val;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-lg-width) and (min-width: $desktop-md-width) {
+  .text {
+    &_size {
+      &_h2 {
+        font-size: 3vw;
+        line-height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-md-width) {
+  .text {
+    &_size {
+      &_h1 {
+        font-size: 120px;
+      }
+      &_h2 {
+        font-size: 38px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .text {
+    &_size {
+      &_h1 {
+        font-size: 100px;
+      }
+      &_h2 {
+        font-size: 32px;
+      }
+      &_main {
+        font-size: $font-size-16;
+        line-height: 132%;
+      }
+
+      &_desc {
+        font-size: $font-size-18;
+        line-height: 132%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .text {
+    &_size {
+      &_h1 {
+        font-size: 80px;
+      }
+
+      &_h2 {
+        font-size: 27px;
+      }
+
+      &_link {
+        font-size: 24px;
+      }
+      &_main {
+        font-size: 14px;
+        line-height: 132%;
+      }
+
+      &_desc {
+        font-size: 16px;
+        line-height: 132%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-sm-width) {
+  .text {
+    &_size {
+      &_h1 {
+        font-size: 48px;
+      }
+
+      &_h2 {
+        font-size: 24px;
+      }
+
+      &_main {
+        font-size: 14px;
+      }
+
+      &_desc {
+        font-size: 14px;
       }
     }
   }

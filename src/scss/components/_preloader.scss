@@ -1,0 +1,29 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.preloader__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preloader__percent {
+  margin-top: 40px;
+}
+
+.loaded {
+  .preloader {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

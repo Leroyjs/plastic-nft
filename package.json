@@ -1,6 +1,6 @@
 {
   "author": "Deviant (https://www.deviant-studio.com/)",
-  "name": "STUB_DEVIANT_NAME",
+  "name": "plastic-nft",
   "version": "0.0.1",
   "description": "",
   "browserslist": [
@@ -8,6 +8,9 @@
     "> 5%"
   ],
   "dependencies": {
+    "flickity": "^3.0.0",
+    "i18next": "^21.6.12",
+    "is-touch-device": "^1.0.1",
     "smooth-scrollbar": "^8.7.4"
   },
   "devDependencies": {

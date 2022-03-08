@@ -1,12 +1,113 @@
 @use "scss/global" as *;
 
 html {
-  background-color: $white;
+  background-color: $bg;
   font-family: $fontMain;
 }
 
-main {
+body {
   overflow-x: hidden;
+}
+
+input {
+  outline: none;
+}
+
+.appearance-animation {
+  opacity: 0;
+  transform: translateY(40px);
+
+  &-1 {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  &-2 {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  &-3 {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  &_line {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+}
+
+.element-show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s, transform 0.4s;
+
+  .appearance-animation {
+    &-1 {
+      opacity: 1;
+      transform: translateY(0px);
+      transition: opacity 0.4s 0.3s, transform 0.4s 0.3s;
+    }
+
+    &-2 {
+      opacity: 1;
+      transform: translateY(0px);
+      transition: opacity 0.4s 0.6s, transform 0.4s 0.6s;
+    }
+
+    &-3 {
+      opacity: 1;
+      transform: translateY(0px);
+      transition: opacity 0.4s 0.9s, transform 0.4s 0.9s;
+    }
+
+    &-4 {
+      opacity: 1;
+      transform: translateY(0px);
+      transition: opacity 0.4s 1.2s, transform 0.4s 1.2s;
+    }
+
+    &_line {
+      transform: scaleX(1);
+
+      &-1 {
+        transform: scaleX(1);
+        transition: transform 0.4s 0.3s;
+      }
+
+      &-2 {
+        transform: scaleX(1);
+        transition: transform 0.4s 0.6s;
+      }
+
+      &-3 {
+        transform: scaleX(1);
+        transition: transform 0.4s 0.9s;
+      }
+
+      &-4 {
+        transform: scaleX(1);
+        transition: transform 0.4s 1.2s;
+      }
+    }
+  }
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-margin-bottom {
+  margin-bottom: $size-60;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
 }
 
 .no-scroll {
@@ -18,5 +119,146 @@ main {
   padding-right: $size-40;
 }
 
+.first-section-margin-top {
+  margin-top: 188px;
+}
+
 .section-margin-top {
+  margin-top: 140px;
+}
+
+.big-column-width {
+  width: 73.5%;
+}
+
+.sub-column-width {
+  width: 26.5%;
+}
+
+.half {
+  width: 50%;
+}
+
+.with-p {
+  p:not(:last-of-type) {
+    margin-bottom: 1em;
+  }
+}
+
+.text-fix {
+  padding-top: 0.2em;
+
+  &-1 {
+    margin-bottom: -0.2em;
+  }
+}
+
+.link {
+  cursor: pointer;
+  position: relative;
+  pointer-events: all;
+  height: 1.2em;
+  display: inline-flex;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.3s;
+    background-color: $black;
+  }
+
+  &:hover:before {
+    transition: width 0.3s, height 0s 0.25s;
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+
+  &_color {
+    &_white {
+      &::before {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-md-width) {
+  .section-margin-top {
+    margin-top: 120px;
+  }
+
+  .first-section-margin-top {
+    margin-top: 170px;
+  }
+
+  .main-padding {
+    padding-left: $size-32;
+    padding-right: $size-32;
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .section-margin-top {
+    margin-top: 100px;
+  }
+
+  .title-margin-bottom {
+    margin-bottom: 50px;
+  }
+
+  .first-section-margin-top {
+    margin-top: 160px;
+  }
+
+  .main-padding {
+    padding-left: $size-24;
+    padding-right: $size-24;
+  }
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .main-padding {
+    padding-left: $size-20;
+    padding-right: $size-20;
+  }
+
+  .title-margin-bottom {
+    margin-bottom: $size-40;
+  }
+
+  .first-section-margin-top {
+    margin-top: 140px;
+  }
+
+  .section-margin-top {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: $tablet-sm-width) {
+  .main-padding {
+    padding-left: $size-12;
+    padding-right: $size-12;
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .main-padding {
+    .first-section-margin-top {
+      margin-top: 120px;
+    }
+
+    .section-margin-top {
+      margin-top: 60px;
+    }
+  }
 }

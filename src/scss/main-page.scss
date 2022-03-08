@@ -1,0 +1,21 @@
+@use "scss/global" as *;
+
+.circle-item {
+  background-image: url("../../images/design/stub.png");
+  background-position: center;
+  background-size: cover;
+  width: calc(16vw - $size-20);
+  height: calc(16vw - $size-20);
+  border-radius: 50%;
+  margin-right: $size-16;
+  margin-bottom: $size-16;
+}
+
+@media screen and (max-width: $tablet-md-width) {
+  .circle-item {
+    margin-right: $size-12;
+    margin-bottom: $size-12;
+    width: calc(calc(calc(100vw - 40px) / 2) - 6px);
+    height: calc(calc(calc(100vw - 40px) / 2) - 6px);
+  }
+}

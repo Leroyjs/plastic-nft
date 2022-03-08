@@ -2,8 +2,15 @@
 <html lang="ru">
 {{> head}}
 <body>
-  <main>
-
+  {{> preloader}}
+  {{> header main-page=true}}
+  <main class="main">
+    {{> first-section}}
+    {{> collection-consists}}
+    {{> media}}
+    {{> team}}
+    {{> partners}}
+    {{> footer}}
   </main>
 </body>
 </html>

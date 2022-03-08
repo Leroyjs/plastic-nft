@@ -2,3 +2,15 @@
 @use "scss/foundation";
 
 /* List of sections used on this page: */
+@use "scss/main-page";
+@use "sections/header";
+@use "sections/first-section";
+@use "sections/collection-consists";
+@use "sections/media";
+@use "sections/team";
+@use "sections/partners";
+@use "sections/footer";
+
+@use "components/preloader";
+@use "components/media-item";
+@use "components/product-img";

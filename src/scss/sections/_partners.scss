@@ -1,0 +1,148 @@
+@use "scss/global" as *;
+
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.partners__main {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+
+.partners__item {
+  margin-bottom: 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.partners__img-wrapper {
+  margin-top: $size-60;
+  display: flex;
+  width: 624px;
+  height: 624px;
+  justify-content: flex-end;
+  margin-left: 20px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.partners__text-wrapper {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.partners__sub-title {
+  margin-right: 100px;
+}
+
+.partners__text {
+  p:not(:last-of-type) {
+    margin-bottom: 1em;
+  }
+}
+
+.partners__blur {
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 400px);
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.partners__blur-item {
+  background-color: $orange;
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  bottom: 100px;
+  opacity: 0.6;
+  left: -120px;
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: partners-blur-item 30s infinite alternate;
+  transform-origin: left;
+}
+
+@keyframes partners-blur-item {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: $desktop-md-width) {
+  .partners__img-wrapper {
+    width: 624px * 0.9;
+    height: 624px * 0.9;
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .partners__img-wrapper {
+    width: 624px * 0.75;
+    height: 624px * 0.75;
+  }
+}
+
+@media screen and (max-width: $tablet-md-width) {
+  .partners__title {
+    text-align: center;
+  }
+
+  .partners__item {
+    margin-bottom: 12px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .partners__text-wrapper {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .partners__img-wrapper {
+    align-self: center;
+  }
+
+  .partners__text {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .partners__text-wrapper {
+    width: 100%;
+  }
+
+  .partners__main {
+    flex-direction: column;
+  }
+
+  .partners__img-wrapper {
+    width: 100vw;
+    overflow: hidden;
+    margin-left: -16px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+
+    svg {
+      min-width: 624px * 0.75;
+      height: 624px * 0.75;
+    }
+  }
+}

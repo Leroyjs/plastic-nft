@@ -1,11 +1,78 @@
 @use "scss/global" as *;
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+
   &_type {
     &_common {
+      height: 48px;
+      padding-left: 32px;
+      padding-right: 32px;
+      border-radius: 30px;
+      border-width: 2px;
+      border-style: solid;
+    }
+    &_main {
+      height: 92px;
+      padding-left: 66px;
+      padding-right: 66px;
+      border-width: 2px;
+      border-style: solid;
+      border-radius: 60px;
+      white-space: nowrap;
     }
   }
 
   &_color {
+    &_black {
+      border-color: $black;
+      background-color: $black;
+      color: $white;
+
+      &:hover {
+        background-color: $bg;
+        color: $black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .button {
+    &_type {
+      &_main {
+        height: 82px;
+        padding-left: 62px;
+        padding-right: 62px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .button {
+    &_type {
+      &_main {
+        height: 70px;
+        padding-left: 58px;
+        padding-right: 58px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .button {
+    &_type {
+      &_main {
+        height: 60px;
+        padding-left: 54px;
+        padding-right: 54px;
+      }
+    }
   }
 }

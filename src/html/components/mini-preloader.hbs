@@ -1,0 +1,11 @@
+<script>
+  const minTimeout = 0; const maxTimeout = 5000; let stepTimeout = maxTimeout /
+  100; let percent = 0; let preloaderIsDone = false; if (window.pageLoaded) {
+  preloaderDone(); } else { window.addEventListener("load", () => {
+  preloaderDone(); }); } setTimeout(() => { if (!preloaderIsDone) {
+  preloaderDone(); } }, maxTimeout); function preloaderDone() { stepTimeout =
+  minTimeout / (100 - percent); setTimeout(() => { preloaderIsDone = true; },
+  minTimeout); } (function drawPercentage() { percent++; setTimeout(() => { if
+  (percent <= 100) { drawPercentage(); } else { const body = document.body;
+  body.classList.add("loaded-whitout-animation"); } }, stepTimeout); })();
+</script>

@@ -1,0 +1,71 @@
+@use "scss/global" as *;
+
+$error-color: #e12727;
+
+.input__line-inner {
+  background-color: $black;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s;
+  left: 0;
+  top: 0;
+}
+
+.input__error {
+  color: $error-color;
+  display: none;
+  position: absolute;
+  transform: translateY(calc(100% + 8px));
+  bottom: 0;
+  right: 0;
+}
+
+.input {
+  width: 100%;
+
+  &:focus,
+  &:valid {
+    & + .input__line {
+      .input__line-inner {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.input {
+  background-color: transparent;
+  border: 0;
+}
+
+.input__line {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.input__wrapper {
+  position: relative;
+
+  &_error {
+    .input__error {
+      display: block;
+    }
+    .input {
+      color: $error-color;
+
+      &::placeholder {
+        color: rgba(225, 39, 39, 0.4);
+      }
+    }
+    .input__line {
+      background-color: rgba(225, 39, 39, 0.4);
+    }
+    .input__line-inner {
+      background-color: $error-color;
+    }
+  }
+}

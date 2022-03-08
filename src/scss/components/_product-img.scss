@@ -1,0 +1,38 @@
+@use "scss/global" as *;
+
+.product-img {
+  width: calc(calc(calc(100vw - 80px) / 4) - 12px);
+  height: calc(calc(calc(100vw - 80px) / 4) - 12px);
+  background-image: url("../../images/design/stub.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: $desktop-md-width) {
+  .product-img {
+    width: calc(calc(calc(100vw - 62px) / 4) - 12px);
+    height: calc(calc(calc(100vw - 62px) / 4) - 12px);
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .product-img {
+    width: calc(calc(calc(100vw - 48px) / 4) - 12px);
+    height: calc(calc(calc(100vw - 48px) / 4) - 12px);
+  }
+}
+
+@media screen and (max-width: $tablet-md-width) {
+  .product-img {
+    width: calc(calc(calc(100vw - 40px) / 2) - 6px);
+    height: calc(calc(calc(100vw - 40px) / 2) - 6px);
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .product-img {
+    width: calc(calc(calc(100vw - 24px) / 2) - 6px);
+    height: calc(calc(calc(100vw - 24px) / 2) - 6px);
+  }
+}

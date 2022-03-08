@@ -1,0 +1,86 @@
+@use "scss/global" as *;
+
+.footer {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.footer__info {
+  position: absolute;
+  padding-bottom: 40px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: $black;
+}
+
+.footer__ul {
+  display: flex;
+}
+
+.footer__li:not(:last-of-type) {
+  margin-right: 40px;
+}
+
+.footer__bg {
+  width: 100%;
+
+  svg {
+    width: 100%;
+  }
+}
+
+.footer__bg_mobile {
+  display: none;
+}
+
+.footer__bg_desktop {
+  display: block;
+}
+
+@media screen and (max-width: $tablet-lg-width) {
+  .footer__li:not(:last-of-type) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer__bg_mobile {
+    display: block;
+    margin-bottom: -20vw;
+  }
+
+  .footer__bg_desktop {
+    display: none;
+  }
+
+  .footer__info {
+    flex-wrap: wrap;
+  }
+
+  .footer__nav {
+    order: -1;
+    width: 100%;
+    margin-bottom: 66px;
+  }
+
+  .footer__li {
+    margin-right: 0;
+  }
+
+  .footer__ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .footer__bg_mobile {
+    margin-bottom: 0vw;
+  }
+}

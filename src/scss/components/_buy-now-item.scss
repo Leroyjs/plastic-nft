@@ -1,0 +1,58 @@
+@use "scss/global" as *;
+
+.buy-now-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(calc(calc(100vw - 80px) / 4) - 12px);
+}
+
+.buy-now-item__title {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.buy-now-item__cost {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.buy-now-item__desc {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.buy-now-item__button {
+  margin-top: 40px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: $desktop-md-width) {
+  .buy-now-item {
+    width: calc(calc(calc(100vw - 62px) / 4) - 12px);
+  }
+}
+
+@media screen and (max-width: $desktop-sm-width) {
+  .buy-now-item {
+    width: calc(calc(calc(100vw - 48px) / 4) - 12px);
+  }
+}
+
+@media screen and (max-width: $tablet-md-width) {
+  .buy-now-item {
+    width: calc(calc(calc(100vw - 40px) / 2) - 6px);
+  }
+}
+
+@media screen and (max-width: $phone-width) {
+  .buy-now-item {
+    width: calc(calc(calc(100vw - 24px) / 2) - 6px);
+  }
+  .buy-now-item__button {
+    margin-top: 20px;
+  }
+  .buy-now-item__title {
+    margin-top: 20px;
+  }
+}

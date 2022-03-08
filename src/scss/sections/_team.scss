@@ -1,0 +1,35 @@
+@use "scss/global" as *;
+
+.team__main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team__item {
+  &:nth-child(6n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(n + 6) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: $tablet-md-width) {
+  .team__item {
+    &:nth-child(n + 6) {
+      margin-bottom: 12px;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n + 10) {
+      margin-bottom: 0;
+    }
+  }
+  .team__title {
+    text-align: center;
+  }
+}

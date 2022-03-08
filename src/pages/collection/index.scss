@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@use "scss/foundation";
+
+/* List of sections used on this page: */
+@use "sections/header";
+@use "sections/collection";
+@use "sections/footer";
+
+@use "components/product-img";
+@use "components/collection-slider";
