@@ -42,7 +42,6 @@ export const initLocalization = () => {
     links.forEach((link) => {
       const commonHref = link.getAttribute("href").split("#")[0];
       link.setAttribute("href", commonHref + "#" + lang);
-      console.log(commonHref);
     });
   };
 

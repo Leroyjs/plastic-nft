@@ -19,7 +19,6 @@ Thumbs.db
 npm-debug.log
 
 node_modules/
-dist/
 
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm,visualstudiocode,visualstudio,phpstorm,windows,macos,linux,node,firebase,wordpress,octobercms
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,visualstudiocode,visualstudio,phpstorm,windows,macos,linux,node,firebase,wordpress,octobercms
@@ -55,7 +54,8 @@ dist/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -163,7 +163,6 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
