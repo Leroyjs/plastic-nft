@@ -51,6 +51,7 @@ module.exports = {
   output: {
     filename: "js/[name].[contenthash].js",
     path: environment.paths.output,
+    publicPath: "/",
   },
   module: {
     rules: [
